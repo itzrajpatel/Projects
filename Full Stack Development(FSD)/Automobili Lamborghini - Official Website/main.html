@@ -1,0 +1,637 @@
+<!-- Title: Automobili Lamborghini - Official Website
+     Enrollment: 22002171210123
+     Subject Name: Full Stack Development (FSD-I)
+     Date: 1-April-24 -->
+
+<html>
+    <head>
+        <title> Lamborghini </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            #ln1 {
+                position: relative;
+                top: 15px;
+                left:10px;
+                font-weight: lighter;
+            }
+            #ln2 {
+                position: relative;
+                top: 15px;
+                left: 390px;
+                font-weight: lighter;
+            }
+            #ln3 {
+                position: relative;
+                top: 17px;
+                left: 465px;
+            }
+            #ln4 {
+                position: relative;
+                top: 15px;
+                left: 500px;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            a.nav-link {
+                text-decoration: none;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            
+            a.nav-link:hover {
+                text-decoration: none;
+            }
+
+            a.nav-link:not(.logo)::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: white;
+                transform: scaleX(0);
+                transform-origin: bottom right;
+                transition: transform 0.3s ease;
+            }
+
+            a.nav-link:not(.logo):hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+
+            #myVideo {
+                position: relative;
+                top: 0;
+                right: 495px;
+                width: 150%;
+            }
+            #p {
+                position: relative;
+                right: 40px;
+            }
+            #p2 {
+                position: relative;
+                right: 50px;
+                border-radius: 50%;
+            }
+            #lnk1 {
+                position: relative;
+                top: 50px;
+                left: 60px;
+            }
+            #lnk1:hover {
+                text-decoration: underline;
+            }
+            #lnk2 {
+                position: relative;
+                top: 25px;
+                left: 160px;
+            }
+            #lnk2:hover {
+                text-decoration: underline;
+            }
+            #lnk3 {
+                position: relative;
+                right: 280px;
+            }
+            #lnk3:hover {
+                text-decoration: underline;
+            }
+            #lnk4 {
+                position: relative;
+                bottom: 24px;
+                left: 280px;
+            }
+            #lnk4:hover {
+                text-decoration: underline;
+            }
+            #lnk5 {
+                position: relative;
+                bottom: 48px;
+                left: 415px;
+            }
+            #lnk5:hover {
+                text-decoration: underline;
+            }
+            #lnk6 {
+                position: relative;
+                bottom: 73px;
+                left: 570px;
+            }
+            #lnk6:hover {
+                text-decoration: underline;
+            }
+            #lnk7 {
+                position: relative;
+                bottom: 60px;
+                left: 60px;
+            }
+            #lnk7:hover {
+                text-decoration: underline;
+            }
+            #lnk8 {
+                position: relative;
+                bottom: 84px;
+                left: 220px;
+            }
+            #lnk8:hover {
+                text-decoration: underline;
+            }
+            #lnk9 {
+                position: relative;
+                bottom: 108px;
+                left: 390px;
+            }
+            #lnk9:hover {
+                text-decoration: underline;
+            }
+            #lnk10 {
+                position: relative;
+                bottom: 132px;
+                left: 490px;
+            }
+            #lnk10:hover {
+                text-decoration: underline;
+            }
+            #lnk11 {
+                position: relative;
+                bottom: 155px;
+                left: 630px;
+            }
+            #lnk11:hover {
+                text-decoration: underline;
+            }
+            #lnk12 {
+                position: relative;
+                bottom: 155px;
+                left: 630px;
+            }
+            #pre1 {
+                position: relative;
+                bottom: 310px;
+            }
+            #pre2 {
+                position: relative;
+                bottom: 300px;
+            }
+            #pre3 {
+                position: relative;
+                top: 60px;
+                left: 75px;
+            }
+            #pre4 {
+                position: relative;
+                top: 30px;
+                left: 20px;
+            }
+            #pre5 {
+                position: relative;
+                top: 80px;
+                left: 50px;
+            }
+            #pre6 {
+                position: relative;
+                top: 80px;
+                left: 50px;
+            }
+            #pre7 {
+                position: relative;
+                bottom: 180px;
+                left: 700px;
+            }
+            #pre8 {
+                position: relative;
+                bottom: 165px;
+                left: 705px;
+            }
+            #pre9 {
+                position: relative;
+                bottom: 350px;
+                left: 705px;
+            }
+            #pre10 {
+                position: relative;
+                bottom: 335px;
+                left: 705px;
+            }
+            #img1 {
+                height: 40px;
+                position: relative;
+                left: 380px;
+                bottom: 70px;
+            }
+            #img2 {
+                height: 30px;
+                position: relative;
+                left: 440px;
+                bottom: 105px;
+            }
+            #img3 {
+                height: 30px;
+                position: relative;
+                left: 490px;
+                bottom: 133px;
+            }
+            #img4 {
+                height: 30px;
+                position: relative;
+                left: 540px;
+                bottom: 163px;
+            }
+            #img5 {
+                height: 40px;
+                position: relative;
+                left: 590px;
+                bottom: 197px;
+            }
+            #img6 {
+                height: 40px;
+                position: relative;
+                left: 650px;
+                bottom: 235px;
+            }
+            #img7 {
+                position: relative;
+                top: 20px;
+                left: 60px;
+            }
+            #img8 {
+                position: relative;
+                top: 120px;
+                left: 60px;
+            }
+            #img9 {
+                position: relative;
+                bottom: 50px;
+                left: 60px;
+            }
+            #currentDate {
+                position: relative;
+                top: 70px;
+                left: 60px;
+            }
+            #button {
+                position: relative;
+                top: 70px;
+                left: 60px;
+                transition: 0.5s ease-out;
+            }
+            #button:hover {
+                background-color: black;
+                color: aliceblue;
+            }
+            #button2 {
+                position: relative;
+                top: 70px;
+                left: 70px;
+                transition: 0.5s ease-out;
+            }
+            #button2:hover {
+                background-color: black;
+                color: aliceblue;
+            }
+            #button3 {
+                position: relative;
+                bottom: 170px;
+                left: 710px;
+                transition: 0.5s ease-out;
+            }
+            #button3:hover {
+                background-color: black;
+                color: aliceblue;
+            }
+            #button4 {
+                padding: 15px 65px;
+                position: relative;
+                bottom: 113px;
+                left: 710px;
+                transition: 0.5s ease-out;
+            }
+            #button4:hover {
+                background-color: black;
+                color: aliceblue;
+            }
+            #button5 {
+                position: relative;
+                bottom: 340px;
+                left: 710px;
+                transition: 0.5s ease-out;
+            }
+            #button5:hover {
+                background-color: black;
+                color: aliceblue;
+            }
+            #button6 {
+                padding: 15px 65px;
+                position: relative;
+                bottom: 283px;
+                left: 710px;
+                transition: 0.5s ease-out;
+            }
+            #button6:hover {
+                background-color: black;
+                color: aliceblue;
+            }
+            #button7 {
+                padding: 15px 65px;
+                position: relative;
+                bottom: 37px;
+                left: 1130px;
+                transition: 0.5s ease-out;
+            }
+            #button7:hover {
+                background-color: black;
+                color: aliceblue;
+            }
+            #button8 {
+                padding: 15px 85px;
+                position: relative;
+                bottom: 100px;
+                left: 400px;
+                background-color: black;
+                color: white;
+                transition: 0.5s ease-out;
+            }
+            #button8:hover {
+                background-color: white;
+                color: black;
+            }
+            body {
+                overflow-x: hidden
+            }
+            .parallelogram {
+	            width: 100px;
+	            height: 50px;
+	            transform: skew(-20deg);
+	            background: #555;
+            }
+            .top-left {
+                position: absolute;
+                top: 8px;
+                left: 16px;
+                font-weight: bold;
+                font-size: 100px;
+            }
+            .bottom-left {
+                position: absolute;
+                bottom: 600px;
+                left: 16px;
+                font-size: 30px;
+            }
+            #footer {
+                position: fixed;
+                bottom: 0;
+                height: 50px;
+                width: 100%;
+                background-color: black;
+            }
+            #nav {
+                background-color: black;
+                height: 100px;
+            }
+            .dropdown-content {
+                display: none;
+                position: relative;
+                top: 50px;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            #text-overlay-1 {
+                position: absolute;
+                top: 30%;
+                left: 10.5%;
+                color: white;
+                font-size: 36px;
+            }
+            #text-overlay-2 {
+                position: absolute;
+                top: 33%;
+                left: 10%;
+                color: white;
+                font-size: 100px;
+                font-weight: bold;
+            }
+            #text-overlay-3 {
+                position: absolute;
+                top: 45%;
+                left: 10%;
+                color: white;
+                font-size: 100px;
+                font-weight: bold;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
+        <script>
+            // Function to update multiple dates
+            function updateDates() {
+                var dateElements = document.getElementsByClassName("dynamicDate");
+    
+                // Loop through each date element
+                for (var i = 0; i < dateElements.length; i++) {
+                    var currentDate = new Date();
+                    var options = {year: 'numeric', month: 'long', day: 'numeric'};
+                    var formattedDate = currentDate.toLocaleDateString('en-US', options);
+    
+                    // Update the content of the current date element
+                    dateElements[i].innerText = formattedDate;
+                }
+            }
+    
+            // Call the updateDates function to set the initial dates
+            window.onload = function () {
+                updateDates();
+            };
+        </script>
+    </head>
+<body>
+    <nav id="nav" class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#link">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="link" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#section1" class="nav-link"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#section2" class="nav-link"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo" href="https://www.lamborghini.com/en-en" class="nav-link"> <img id="p" src="logo.png" height="65px"> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="ln1" href="https://www.lamborghini.com/en-en/models" class="nav-link text-white"> MODELS </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="ln1" href="https://www.lamborghini.com/en-en/beyond" class="nav-link text-white"> BEYOND </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="ln1" href="https://www.lamborghini.com/en-en/ownership" class="nav-link text-white"> OWNERSHIP </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="ln1" href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown"> MOTORSPORT </a>
+                        <ul class="dropdown-menu dropdown-content">
+                            <li>
+                                <a href="#" class="dropdown-item"> SC63 </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item"> SUPER TROFEO </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item"> GT3 </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item"> MOTORSPORT MODELS </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item"> DRIVERS </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item"> MOTORSPORT NEWS </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item"> EXPERIENCE </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item"> ESPORTS </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a id="ln2" href="https://www.lamborghini.com/en-en/dealerships" class="nav-link text-white"> DEALERSHIPS </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="ln2" href="https://www.lamborghini.com/en-en/museum" class="nav-link text-white"> MUSEUM </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="ln2" href="https://www.lamborghini.com/en-en/store" class="nav-link text-white"> STORE </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="ln2" href="buy.html" class="nav-link text-white"> BUY </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo" id="ln3"  href="https://www.lamborghini.com/en-en" class="nav-link"> <img id="p2" src="find.png" height="35px">  </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo" id="ln4"  href="login.html" class="nav-link"> <img id="p2" src="img_avatar.png" height="35px"> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="section1" class="container-fluid">
+        <video autoplay muted loop id="myVideo">
+            <source src="lamborghini-4.mp4" type="video/mp4">
+        </video>
+        <div id="text-overlay-1">
+            <p> JOIN US TO DISCOVER MORE</p>
+        </div>
+        <div id="text-overlay-2">
+            <p>DIREZIONE</p>
+        </div>
+        <div id="text-overlay-3">
+            <p>COR TAURI</p>
+        </div>
+    </div>
+    <div id="demo" class="carousel slide bg-dark" data-bs-ride="carousel">
+        <div  class="carousel-indicators">
+            <button data-bs-target="#demo" data-bs-slide-to="0" class="active bg-danger"></button>
+            <button data-bs-target="#demo" data-bs-slide-to="1" class="bg-danger"></button>
+            <button data-bs-target="#demo" data-bs-slide-to="2" class="bg-danger"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="revuelto.jpeg" style="height: 800px; width: 1500px;">
+                <div class="top-left text-white"> REVUELTO </div>
+                <div class="bottom-left text-white"> FROM NOW ON </div>
+            </div>
+            <div class="carousel-item">
+                <img src="huracan.jpeg" style="height: 800px; width: 1450px;">
+                <div class="top-left text-white"> HURACÀN </div>
+                <div class="bottom-left text-white"> BEYOND THE CONCRETE </div>
+            </div>
+            <div class="carousel-item">
+                <img src="urus.jpeg" style="height: 800px; width: 1500px;">
+                <div class="top-left text-white"> URUS </div>
+                <div class="bottom-left text-white"> UNLOCK ANY ROAD </div>
+            </div>
+        </div>
+    <button class="carousel-control-prev" data-bs-target="#demo" data-bs-slide="prev" style="height: 50px; width: 50px; top: 350px;">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" data-bs-target="#demo" data-bs-slide="next" style="height: 50px; width: 50px; top: 350px;">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+    </div>
+    <div style="height: 2200px; width: 100%;">
+        <pre id="pre3" style="font-size: 45px; font-weight: bold;"> NEWS </pre>
+        <pre id="pre4" style="font-size: 120px; font-weight: bold;"> LAMBORGHINI WORLD </pre>
+        <a class="logo" href="https://www.lamborghini.com/en-en/news/automobili-lamborghini-is-top-employer-2024" class="nav-link text-white"> <img id="img7" src="cover.jpeg" style="height: 550px; width: 1300px;"> </a>
+        <pre id="currentDate" class="dynamicDate" style="font-size: 20px;"> 19 JANUARY 2024 </pre>
+        <a href="https://www.lamborghini.com/en-en/news?tags=people"> <input id="button" type="button" value="PEOPLE"> </a>
+        <a href="https://www.lamborghini.com/en-en/news?tags=corporate"> <input id="button2" type="button" value="CORPORATE"> </a>
+        <pre id="pre5" style="font-size: 30px; font-weight: bold; font-family: Arial, Helvetica, sans-serif;"> AUTOMOBILI LAMBORGHINI IS TOP EMPLOYER 
+ 2024 </pre>
+        <a href="https://www.lamborghini.com/en-en/news/automobili-lamborghini-over-10000-cars-delivered"> <input id="button7" type="button" value="READ MORE"> </a>
+        <pre id="pre6"> Automobili Lamborghini received the Top Employer Italia certification for the eleventh year in a row. </pre>
+        <a class="logo" href="https://www.lamborghini.com/en-en/news/a-driving-experience-dedicated-to-lamborghini-huracan" class="nav-link text-white"> <img id="img8" src="cover2.jpeg" style="height: 300px; width: 600px;"> </a>
+        <pre id="pre7" class="dynamicDate" style="font-size: 15px; font-family: Arial, Helvetica, sans-serif;"> 17 JANUARY 2024 </pre>
+        <a href="https://www.lamborghini.com/en-en/news?tags=corporate"> <input id="button3" type="button" value="EVENTS"> </a>
+        <pre id="pre8" style="font-size: 30px; font-weight: bold; font-family: Arial, Helvetica, sans-serif;"> A DRIVING EXPERIENCE DEDICATED 
+ TO LAMBORGHINI HURACÁN </pre>
+        <a href="https://www.lamborghini.com/en-en/news?tags=corporate"> <input id="button4" type="button" value="READ MORE"> </a>
+        <a href="https://www.lamborghini.com/en-en/news/a-driving-experience-dedicated-to-lamborghini-huracan" class="nav-link text-white"> <img id="img9" src="cover3.jpeg" style="height: 300px; width: 600px;"> </a>
+        <pre id="pre9" class="dynamicDate" style="font-size: 15px; font-family: Arial, Helvetica, sans-serif;"> 16 JANUARY 2024 </pre>
+        <a href="https://www.lamborghini.com/en-en/news?tags=corporate"> <input id="button5" type="button" value="CORPORATE"> </a>
+        <pre id="pre10" style="font-size: 30px; font-weight: bold; font-family: Arial, Helvetica, sans-serif;"> AUTOMOBILI LAMBORGHINI: OVER 
+ 10,000 CARS DELIVERED </pre>
+        <a href="https://www.lamborghini.com/en-en/news/automobili-lamborghini-over-10000-cars-delivered"> <input id="button6" type="button" value="READ MORE"> </a>
+        <a href="https://www.lamborghini.com/en-en/news"> <input id="button8" type="button" value="SEE ALL"> </a>
+    </div>
+    <div class="bg-dark" style="height: 480px; width: 100%;">
+        <a id="lnk1" href="https://www.lamborghini.com/en-en/company" class="nav-link text-white logo"> COMPANY </a>
+        <a id="lnk2" href="https://www.lamborghini.com/en-en/financials" class="nav-link text-white logo"> FINANCIALS </a>
+        <a id="lnk3" href="https://www.lamborghini.com/en-en/careers" class="nav-link text-white logo"> CAREERS </a>
+        <a id="lnk4" href="https://www.lamborghini.com/en-en/contact-us" class="nav-link text-white logo"> CONTACT US </a>
+        <a id="lnk5" href="https://www.lamborghini.com/en-en/sustainability" class="nav-link text-white logo"> SUSTAINABILITY </a>
+        <a id="lnk6" href="https://media.lamborghini.com/english?_gl=1*1637w7b*_ga*MTUxMjM5NTk3NC4xNzA1MDgwMTcy*_ga_Z6KBBZE20R*MTcwNTUwNTIzOC42LjEuMTcwNTUwNjEzMC41Mi4wLjA." class="nav-link text-white logo"> MEDIA CENTER </a>
+        <a id="lnk7" href="https://www.lamborghini.com/en-en/privacy-legal" class="nav-link text-white logo"> PRIVACY & LEGAL </a>
+        <a id="lnk8" href="https://www.lamborghini.com/en-en#onetrust-settings" class="nav-link text-white logo"> COOKIE SETTINGS </a>
+        <a id="lnk9" href="https://www.lamborghini.com/en-en/sitemap" class="nav-link text-white logo"> SITEMAP </a>
+        <a id="lnk10" href="https://newsletter.lamborghini.com/en" class="nav-link text-white logo"> NEWSLETTER </a>
+        <a id="lnk11" href="https://www.lamborghini.com/en-en/accessibility" class="nav-link text-white logo"> ACCESSIBILITY </a>
+        <a id="lnk12" href="https://www.instagram.com/lamborghini/?hl=en" class="nav-link text-white logo"> <img id="img1" src="instagram.png"></a>
+        <a id="lnk12" href="https://www.facebook.com/Lamborghini/" class="nav-link text-white logo"> <img id="img2" src="face.jpeg"></a>
+        <a id="lnk12" href="https://www.youtube.com/channel/UC9DXZC8BCDOW6pYAQKgozqw" class="nav-link text-white logo"> <img id="img3" src="youtube.png"></a>
+        <a id="lnk12" href="https://twitter.com/Lamborghini" class="nav-link text-white logo"> <img id="img4" src="twitter2.png"></a>
+        <a id="lnk12" href="https://www.linkedin.com/company/automobili-lamborghini-s-p-a-" class="nav-link text-white logo"> <img id="img5" src="linkedin2.png"></a>
+        <a id="lnk12" href="https://discord.gg/vet6ZBjpFd" class="nav-link text-white logo"> <img id="img6" src="discord.png"></a>
+        <pre id="pre1" class="text-white" style="font-family: 'Times New Roman', Times, serif; font-size: large;">
+            *  The consumption and emissions values in the website refer to your geographical IP. This value might be unrealistic if you navigate using VPN or if the position of your Internet 
+            provider is imprecise. If you believe you are incorrectly geolocalized, contact your dealer to get valid consumption and emissions information in your area.
+        </pre>
+        <pre id="pre2" class="text-white" style="font-family: Arial, Helvetica, sans-serif, Times, serif; font-size: large;">
+            Copyright © 2024 Automobili Lamborghini S.p.A. a sole shareholder company part of Audi Group. 
+            All rights reserved. VAT no. IT 00591801204 
+            WARNING ABOUT ILLEGAL OFFERS OF ALLEGED SHARES OF AUTOMOBILI LAMBORGHINI S.P.A.
+            Automobili Lamborghini S.p.A. got the notice that several third parties across different countries are allegedly offering shares in Automobili Lamborghini S.p.A. 
+            These offers are unlawful and originate neither from Volkswagen Aktiengesellschaft nor from any of its subsidiaries.
+        </pre>
+    </div>
+    <div id="footer" class="text-white">
+        <p>
+            Consumption and emission values of all vehicles promoted on this page*: Fuel consumption combined: 19,5-10,3 l/100km (WLTP); Power consumption combined: 78,1 kWh/100 Km (WLTP); 
+            CO2-emissions combined: 440-276 g/km (WLTP)
+        </p>
+    </div>
+</body>
+</html>
