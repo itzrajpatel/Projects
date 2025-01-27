@@ -51,11 +51,11 @@
     </style>
     <script>
         // List of all available room numbers
-        const allRooms = ["101", "102", "103", "104", "105", "201", "202", "203", "204", "205"];
+        const allRooms = ["101", "102", "103", "104", "105", "106-A", "106-B", "106-C", "106-D", "201", "202", "203", "204", "205"];
 
         // Function to check if a room is a lab
         function isLab(room) {
-            return room === "104" || room === "204";
+            return room === "104" || room === "204" || room === "106-A" || room === "106-B" || room === "106-C" || room === "106-D";
         }
 
         // Display Vacant Rooms
@@ -188,22 +188,67 @@
                 });
             });
 
+            // document.querySelectorAll('.save-btn').forEach(button => {
+            //     button.addEventListener('click', function () {
+            //         const index = this.getAttribute('data-index');
+            //         const card = this.closest('.card');
+            //         const className = card.querySelector('.class-name-input').value;
+            //         const subject = card.querySelector('.subject-input').value;
+            //         const faculty = card.querySelector('.faculty-input').value;
+            //         const room = card.querySelector('.room-input').value;
+            //         const dateTime = card.querySelector('.date-input').value;
+
+            //         // Update the class details in localStorage
+            //         upcomingClasses[index] = { className, subject, faculty, room, dateTime };
+            //         localStorage.setItem('upcomingClasses', JSON.stringify(upcomingClasses));
+
+            //         // Disable inputs and toggle button visibility
+            //         card.querySelectorAll('input').forEach(input => input.disabled = true);
+            //         this.style.display = 'none';
+            //         card.querySelector('.edit-btn').style.display = 'block';
+
+            //         // Refresh the vacant rooms list
+            //         displayVacantRooms();
+            //     });
+            // });
+
             document.querySelectorAll('.save-btn').forEach(button => {
                 button.addEventListener('click', function () {
-                    const index = this.getAttribute('data-index');
+                    const index = this.getAttribute('data-index'); // Get the index of the class being edited
                     const card = this.closest('.card');
-                    const className = card.querySelector('.class-name-input').value;
-                    const subject = card.querySelector('.subject-input').value;
-                    const faculty = card.querySelector('.faculty-input').value;
-                    const room = card.querySelector('.room-input').value;
-                    const dateTime = card.querySelector('.date-input').value;
+                    const inputs = card.querySelectorAll('input');
+                    const className = card.querySelector('.class-name-input').value.trim();
+                    const subject = card.querySelector('.subject-input').value.trim();
+                    const faculty = card.querySelector('.faculty-input').value.trim();
+                    const room = card.querySelector('.room-input').value.trim();
+                    const dateTime = card.querySelector('.date-input').value.trim();
 
-                    // Update the class details in localStorage
+                    // Ensure all fields are filled
+                    if (!className || !subject || !faculty || !room || !dateTime) {
+                        alert("Please fill in all fields before saving.");
+                        return;
+                    }
+
+                    // Validate if the room is already booked for the same date and time
+                    const isRoomConflict = upcomingClasses.some((classDetail, classIndex) => {
+                        return (
+                            classIndex.toString() !== index && // Exclude the current class being edited
+                            classDetail.room === room && // Check if room is the same
+                            classDetail.dateTime === dateTime // Check if date and time are the same
+                        );
+                    });
+
+                    if (isRoomConflict) {
+                        alert(`Error: Room ${room} is already booked for the selected date and time.`);
+                        return;
+                    }
+
+                    // Update the class details in the `upcomingClasses` array
                     upcomingClasses[index] = { className, subject, faculty, room, dateTime };
                     localStorage.setItem('upcomingClasses', JSON.stringify(upcomingClasses));
 
                     // Disable inputs and toggle button visibility
-                    card.querySelectorAll('input').forEach(input => input.disabled = true);
+                    inputs.forEach(input => input.disabled = true);
                     this.style.display = 'none';
                     card.querySelector('.edit-btn').style.display = 'block';
 
@@ -236,6 +281,17 @@
             // Display saved classes and vacant rooms
             displayUpcomingClasses();
         };
+
+        // Function to check if the selected room is available on the selected date
+function isRoomAvailable(room, dateTime, index) {
+    const upcomingClasses = JSON.parse(localStorage.getItem("upcomingClasses")) || [];
+    
+    // Exclude the current class (so it doesn't block itself when being edited)
+    const filteredClasses = upcomingClasses.filter((classDetails, classIndex) => classIndex !== index);
+
+    // Check if the room is already booked on the selected date
+    return !filteredClasses.some(classDetails => classDetails.room === room && classDetails.dateTime === dateTime);
+}
 
         // Logout function
         function logout() {
