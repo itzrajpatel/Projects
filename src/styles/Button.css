@@ -1,0 +1,17 @@
+#logoutbtn:hover {
+    background-color: transparent;
+}
+
+.custom-btn {
+    background-color: black !important;
+    color: white !important;
+    border: none !important;
+    width: 50px;  /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    text-align: center;
+}
+
+.custom-btn:hover {
+    background-color: #6e6c6c !important; /* Slightly lighter black for hover */
+    cursor: pointer;
+}
